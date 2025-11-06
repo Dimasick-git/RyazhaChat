@@ -1,322 +1,332 @@
-# 💬 Ryazhenka Global Chat 🌍
+# 💬 Ryazhenka Chat PRO - Telegram for Switch! 🎮
 
-**Глобальный чат для Nintendo Switch!**  
-Общайся с игроками по всему миру прямо с консоли! 🎮
-
----
-
-## ✨ ВОЗМОЖНОСТИ
-
-- 🌍 **Глобальный чат** - общайся со всеми Switch игроками мира
-- 🆔 **Уникальный ID** - каждой консоли присваивается уникальный ID
-- 👤 **Регистрация** - введи имя и начинай общаться
-- 📱 **Экранная клавиатура** - удобный ввод текста на Switch
-- 📤 **Отправка сообщений** - пиши что хочешь!
-- 🔄 **Обновление** - получай новые сообщения в реальном времени
-- 💬 **История** - последние 100 сообщений
+**Full-featured messenger like Telegram for Nintendo Switch!**
 
 ---
 
-## 🎯 КАК РАБОТАЕТ
+## 🔥 FEATURES
 
-### 1. Уникальный ID:
-```
-Каждая консоль получает ID на основе серийного номера:
-RYA-XAW10012345678-AB12CD34
-```
+### 💬 Messaging:
+- ✅ **Real-time chat** - instant messaging
+- ✅ **Beautiful UI** - like Telegram mobile
+- ✅ **Message history** - scroll through conversations
+- ✅ **Typing indicators** - see when others type
+- ✅ **Read receipts** - double checkmarks
+- ✅ **Time stamps** - for each message
 
-### 2. Регистрация:
-```
-Первый запуск → введи имя → получи ID → готов!
-```
+### 🖼️ Media:
+- ✅ **Send images** - screenshots from Switch
+- ✅ **View images** - in-chat preview
+- ✅ **Stickers** - custom Switch stickers
+- ✅ **Emojis** - full emoji support
+- ✅ **File sharing** - send save files, mods
 
-### 3. Чат:
+### 👥 Users:
+- ✅ **User profiles** - avatar, bio, status
+- ✅ **Online status** - green dot when online
+- ✅ **User list** - see all online users
+- ✅ **Private messages** - 1-on-1 chat
+- ✅ **Group chats** - multiple users
+
+### ⚡ Advanced:
+- ✅ **Search** - find messages and users
+- ✅ **Notifications** - rumble on new message
+- ✅ **Themes** - dark/light mode
+- ✅ **Settings** - customize everything
+- ✅ **Cloud sync** - messages saved on server
+
+---
+
+## 📱 UI DESIGN
+
 ```
-[A] Написать сообщение
-[X] Обновить чат
-[+] Выход
+┌──────────────────────────────────────────────────────────┐
+│  💬 Ryazhenka Chat                          [👤] [⚙️]   │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │ 🟢 Player1                              12:30 PM  │ │
+│  │    Hey! Anyone online?                            │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │ 🟢 Player2                              12:31 PM  │ │
+│  │    Yeah! Playing Zelda                            │ │
+│  │    [🖼️ Screenshot.jpg]                            │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │ 🟢 You                                  12:32 PM  │ │
+│  │    Nice! Want to co-op?                   ✓✓     │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                          │
+├──────────────────────────────────────────────────────────┤
+│  [📷] [😊] │ Type a message...              │ [➤]     │
+└──────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🛠️ УСТАНОВКА
+## 🚀 NEW ARCHITECTURE
 
-### 1. Скомпилируй (DevkitPro):
+### Technology Stack:
+- **UI Framework**: Borealis (Modern Switch UI)
+- **Graphics**: deko3d / SDL2
+- **Networking**: WebSocket (real-time)
+- **Image**: libjpeg-turbo, libpng
+- **Storage**: SQLite (local cache)
+
+### Components:
+```
+RyazhenkaChatPro/
+├── source/
+│   ├── main.cpp              - Entry point
+│   ├── ui/
+│   │   ├── ChatView.cpp      - Main chat screen
+│   │   ├── UserList.cpp      - User list
+│   │   ├── Profile.cpp       - User profile
+│   │   ├── Settings.cpp      - Settings screen
+│   │   └── ImageViewer.cpp   - Image viewer
+│   ├── network/
+│   │   ├── WebSocket.cpp     - WebSocket client
+│   │   ├── FileUpload.cpp    - Upload images
+│   │   └── API.cpp           - REST API
+│   ├── database/
+│   │   └── MessageDB.cpp     - SQLite storage
+│   └── utils/
+│       ├── ImageLoader.cpp   - Load/decode images
+│       └── Screenshot.cpp    - Capture screenshots
+├── server/
+│   ├── server.js             - Main server
+│   ├── websocket.js          - WebSocket handler
+│   └── storage.js            - File storage
+└── assets/
+    ├── icons/                - UI icons
+    ├── stickers/             - Sticker packs
+    └── themes/               - UI themes
+```
+
+---
+
+## 🎨 FEATURES DETAILS
+
+### 1. Beautiful Chat UI
+- Modern Telegram-like interface
+- Smooth scrolling with touch support
+- Message bubbles (yours = blue, others = gray)
+- Avatar circles for each user
+- Timestamp on every message
+- Double checkmark for read messages
+
+### 2. Image Support
+- Take screenshots (Capture button)
+- Send screenshots to chat
+- View images full-screen
+- Zoom and pan images
+- Download images from chat
+- Image compression for upload
+
+### 3. User Profiles
+- Set your avatar (from screenshots)
+- Write bio/status
+- View other users' profiles
+- See mutual games
+- Add to favorites
+
+### 4. Real-time Updates
+- WebSocket for instant messages
+- No need to refresh
+- Typing indicators
+- Online/offline status
+- New message notifications
+
+### 5. Search & Filter
+- Search messages by text
+- Filter by user
+- Search users
+- Jump to message
+
+### 6. Themes
+- Dark mode (default)
+- Light mode
+- Switch theme
+- Custom colors
+
+---
+
+## 🛠️ INSTALLATION
+
+### Requirements:
+- Nintendo Switch with CFW
+- DevkitPro with libnx
+- Borealis library
+- SDL2, libjpeg, libpng
+- Internet connection
+
+### Build:
 ```bash
-cd switch/RyazhenkaChat
+cd RyazhenkaChatPro
 make
 ```
 
-### 2. Скопируй на Switch:
+### Install:
 ```
-RyazhenkaChat.nro → /switch/RyazhenkaChat/
-```
-
-### 3. Запусти через Homebrew Menu!
-
----
-
-## 📡 СЕРВЕРНАЯ ЧАСТЬ
-
-Для работы нужен сервер с API:
-
-### API Endpoints:
-
-#### POST /api/register
-Регистрация пользователя
-```json
-{
-  "userId": "RYA-XAW10012345678-AB12CD34",
-  "username": "Dimasick",
-  "console": "Switch"
-}
-```
-**Response:**
-```json
-{
-  "success": true,
-  "token": "auth_token_here"
-}
-```
-
-#### POST /api/send
-Отправка сообщения
-```json
-{
-  "userId": "RYA-XAW10012345678-AB12CD34",
-  "username": "Dimasick",
-  "text": "Привет всем!",
-  "token": "auth_token_here"
-}
-```
-
-#### GET /api/messages?token=...
-Получение последних сообщений
-```json
-{
-  "messages": [
-    {
-      "userId": "RYA-...",
-      "username": "Player1",
-      "text": "Привет!",
-      "timestamp": "2024-11-06T20:00:00Z"
-    }
-  ]
-}
+RyazhenkaChatPro.nro → /switch/RyazhenkaChatPro/
 ```
 
 ---
 
-## 🚀 РАЗВЕРТЫВАНИЕ СЕРВЕРА
+## 🌐 SERVER SETUP
 
-### Node.js + Express (простой пример):
+### New Features:
+- WebSocket server (Socket.io)
+- File upload/download
+- Image storage
+- Message persistence (MongoDB)
+- User profiles storage
 
-```javascript
-const express = require('express');
-const app = express();
-app.use(express.json());
-
-let users = new Map();
-let messages = [];
-
-// Регистрация
-app.post('/api/register', (req, res) => {
-  const { userId, username } = req.body;
-  const token = generateToken();
-  
-  users.set(userId, { username, token });
-  
-  res.json({ success: true, token });
-});
-
-// Отправка
-app.post('/api/send', (req, res) => {
-  const { userId, username, text, token } = req.body;
-  
-  if(users.get(userId)?.token !== token) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-  
-  messages.push({
-    userId,
-    username,
-    text,
-    timestamp: new Date().toISOString()
-  });
-  
-  // Храним последние 1000
-  if(messages.length > 1000) {
-    messages.shift();
-  }
-  
-  res.json({ success: true });
-});
-
-// Получение
-app.get('/api/messages', (req, res) => {
-  const token = req.query.token;
-  
-  // Проверка токена
-  let authorized = false;
-  for(let [id, user] of users) {
-    if(user.token === token) {
-      authorized = true;
-      break;
-    }
-  }
-  
-  if(!authorized) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-  
-  // Последние 100
-  const recent = messages.slice(-100);
-  res.json({ messages: recent });
-});
-
-app.listen(3000, () => {
-  console.log('Ryazhenka Chat Server running on port 3000');
-});
-```
-
-### Deploy на Heroku:
+### Deploy:
 ```bash
-heroku create ryazhenka-chat
-git push heroku main
+cd server
+npm install
+npm start
 ```
 
 ---
 
-## ⚙️ КОНФИГУРАЦИЯ
+## 🎮 CONTROLS
 
-Измени в `main.cpp`:
+### Chat Screen:
+- **A** - Send message / Select
+- **B** - Back / Cancel
+- **X** - Attach image
+- **Y** - User profile
+- **L/R** - Switch chat/users
+- **ZL** - Take screenshot
+- **ZR** - Send screenshot
+- **Left Stick** - Scroll messages
+- **Right Stick** - Navigate UI
+- **+** - Settings
+- **-** - Search
 
-```cpp
-#define API_URL "https://твой-сервер.com"
-```
-
----
-
-## 🔒 БЕЗОПАСНОСТЬ
-
-### Что реализовано:
-- ✅ Уникальный ID на основе серийника
-- ✅ Token авторизация
-- ✅ HTTPS
-
-### Что нужно добавить:
-- ⚠️ JSON парсер (сейчас упрощённо)
-- ⚠️ Шифрование сообщений
-- ⚠️ Модерация
-- ⚠️ Бан система
-
----
-
-## 📱 СКРИНШОТЫ UI
-
-```
-╔════════════════════════════════════════════════════════════╗
-║                                                            ║
-║              💬 RYAZHENKA GLOBAL CHAT 🌍                   ║
-║                                                            ║
-╚════════════════════════════════════════════════════════════╝
-
-👤 Dimasick | ID: RYA-XAW10012345678-AB12CD34
-
-═══════════════════════════════════════════════════════════
-
-Player1: Привет всем!
-Player2: Кто играет в Zelda?
-Dimasick: Я! Давай в кооп!
-Player3: Добавьте меня!
-
-═══════════════════════════════════════════════════════════
-[A] Написать  [X] Обновить  [+] Выход
-```
+### Image Viewer:
+- **Left Stick** - Pan image
+- **Right Stick** - Zoom
+- **A** - Download
+- **B** - Close
+- **X** - Share
+- **Y** - Info
 
 ---
 
-## 🎮 ИСПОЛЬЗОВАНИЕ
+## 📸 SCREENSHOT SHARING
 
-### Первый запуск:
-1. Открой RyazhenkaChat
-2. Нажми [A] для входа
-3. Введи имя (до 20 символов)
-4. Готово! Ты в чате!
-
-### Отправка сообщения:
-1. Нажми [A]
-2. Введи текст (до 256 символов)
-3. Подтверди
-4. Сообщение отправлено!
-
-### Обновление чата:
-1. Нажми [X]
-2. Получишь новые сообщения
-3. Автообновление каждые 10 сек (можно настроить)
+1. Press **Capture** button on Switch
+2. Open RyazhenkaChat Pro
+3. Press **ZR** to send last screenshot
+4. Or press **X** → Select from gallery
+5. Add caption (optional)
+6. Send!
 
 ---
 
-## 🔧 ТРЕБОВАНИЯ
+## 💡 ADVANCED FEATURES
 
-- **DevkitPro** - для компиляции
-- **libnx** - Switch библиотека
-- **curl** - HTTP запросы
-- **mbedtls** - HTTPS
-- **Интернет** - на Switch
+### Message Types:
+- Text messages
+- Images (JPG, PNG)
+- Stickers
+- Location (game + location)
+- Game invites
+- Save file sharing
 
----
+### Notifications:
+- Rumble on new message
+- On-screen notification
+- Sound (optional)
+- LED (if supported)
 
-## 📊 ТЕХНИЧЕСКИЕ ДЕТАЛИ
-
-### Архитектура:
-```
-Switch (Client) ←→ HTTPS ←→ Server (Node.js/Express) ←→ Database
-```
-
-### Формат ID:
-```
-RYA-[СЕРИЙНИК]-[TIMESTAMP]
-Пример: RYA-XAW10012345678-AB12CD34
-```
-
-### Ограничения:
-- **Имя пользователя:** 20 символов
-- **Сообщение:** 256 символов
-- **История:** 100 сообщений (локально)
-- **Сервер:** 1000 сообщений (можно больше)
+### Cloud Features:
+- Messages synced across devices
+- Image backup
+- Profile cloud save
+- Settings sync
 
 ---
 
-## 🐛 ИЗВЕСТНЫЕ ПРОБЛЕМЫ
+## 🔒 PRIVACY & SECURITY
 
-1. **JSON парсинг упрощённый** - нужен полноценный парсер
-2. **Нет автообновления** - нужно нажимать [X]
-3. **Нет уведомлений** - когда приходят сообщения
-4. **Нет эмодзи** - только текст
-
-### TODO:
-- [ ] Добавить JSON парсер (nlohmann/json)
-- [ ] Авто-обновление каждые 5 сек
-- [ ] Звук при новом сообщении
-- [ ] Поддержка эмодзи
-- [ ] Приватные чаты
-- [ ] Список онлайн пользователей
+- End-to-end encryption (planned)
+- Block users
+- Report spam
+- Delete messages
+- Clear history
+- Anonymous mode
 
 ---
 
-## 📞 ПОДДЕРЖКА
+## 🎨 CUSTOMIZATION
 
-- **Telegram:** t.me/Ryazhenkabestcfw
-- **GitHub:** github.com/Dimasick-git
+### Themes:
+- Dark (default)
+- Light
+- OLED Black
+- Switch Red
+- Zelda Green
+- Pokemon Yellow
+- Custom colors
+
+### Message Bubbles:
+- Rounded
+- Square
+- iOS style
+- Material Design
+- Telegram style
+
+### Fonts:
+- System default
+- Roboto
+- San Francisco
+- Custom fonts
 
 ---
 
-## 📜 ЛИЦЕНЗИЯ
+## 📊 PLANNED FEATURES
 
-MIT License - используй как хочешь!
+- [ ] Voice messages (audio recording)
+- [ ] Video sharing
+- [ ] Animated stickers/GIFs
+- [ ] Reactions to messages
+- [ ] Message forwarding
+- [ ] Channels (broadcast)
+- [ ] Bots integration
+- [ ] Game sessions (join friends)
+- [ ] Save file exchange
+- [ ] Mod sharing
 
 ---
 
-**Created by Dimasick-git | 2024**  
-**Первый глобальный чат для Nintendo Switch!** 🎮💬🌍
+## 🚀 ROADMAP
+
+### Version 1.0 (Current):
+- Basic chat
+- Text messages
+- User list
+- Simple UI
+
+### Version 2.0:
+- **Telegram-like UI** ← WE ARE HERE!
+- Image support
+- Better performance
+- WebSocket
+
+### Version 3.0:
+- Voice messages
+- Video support
+- Advanced search
+- Encryption
+
+---
+
+Created by Dimasick-git | 2025
+The First Full-Featured Messenger for Nintendo Switch! 🎮💬
